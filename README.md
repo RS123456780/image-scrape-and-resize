@@ -34,6 +34,15 @@ python delete_duplication.py [output_dir] [input_dir1] [input_dir2] [input_dir3]
 出力ディレクトリ名はすでに存在するものを入力してはいけません。
 入力ディレクトリが1つのみの場合解像度順にソートされます。
 
+2024/6/30 追加  
+delete_duplication.cppを追加しました。pythonバージョンでは似た画像が誤って削除されてしまうので、C++でより高速で正確なプログラムを作成しました。
+delete_duplication.exeは静的リンクでコンパイルしたのでOpenCVがインストールされていないWindowsマシンでも動作します。
+使用する際はコマンドラインに以下のコマンドを入力してください。
+```bash
+./delete_duplication.exe [output_dir] [input_dir1] [input_dir2] [input_dir3]...
+```
+
+
 image_resizer.pyを使う際は、コマンドラインに
 ```bash
 python image_resizer.py
